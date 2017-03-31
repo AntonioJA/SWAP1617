@@ -1,8 +1,8 @@
-## Práctica 2
+# Práctica 2
 
 Práctica realizada en la sesión 2
 
-# Capturas de pantalla**
+## Capturas de pantalla
 
 **captura de pantalla del envío del tar.gz creado**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica2/tarssh.png)
@@ -16,3 +16,8 @@ Práctica realizada en la sesión 2
 **captura de pantalla de la generación de clave automática**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica2/keygen1.png)
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica2/keygen2.png)
+
+
+**captura de pantalla del uso de crontab**
+*Creamos un archivo ejemplo en el que introducimos un mensaje hello*
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica2/crontab.png)
