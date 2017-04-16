@@ -34,3 +34,11 @@ Para que funcione correctamente paramos el servicio nginx y activamos el de hapr
 
 **captura de pantalla en el que se muestra este reparto de trabajo por defecto**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartohaproxy.png)
+
+## Parte de ala carga
+
+Utilizamos primero con la configuración mediante nginx con 10000 peticiones haciendo 100 cada vez.
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/cargarnginx.png)
+
+Hacemos lo mismo pero con la configuración de haproxy
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/cargarhaproxy.png)
