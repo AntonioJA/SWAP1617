@@ -8,6 +8,8 @@ Práctica realizada en la sesión 3
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/configuracionNginx.png)
 
 Con esta configuración tenemos un reparto de trabajo de peso 1 para ambas máquinas.
+Para evitar problemas a la hora de mostrar las páginas correspondientes realizamos un rm al directorio 
+/etc/nginx/sites-enabled/default
 
 **captura de pantalla en el que se muestra este reparto de trabajo por defecto**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartoTrabajo.png)
