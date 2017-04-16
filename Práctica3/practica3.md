@@ -14,8 +14,12 @@ Para evitar problemas a la hora de mostrar las páginas correspondientes realiza
 **captura de pantalla en el que se muestra este reparto de trabajo por defecto**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartoTrabajo.png)
 
-Ye hemos tenido en cuenta que podemos indicar nosotros el peso que queramos con weigth como dice la prácitca y
-el uso de ip_has para el balanceo por ip y finalmente hemos dejado el keepalive
+Ye hemos tenido en cuenta que podemos indicar nosotros el peso que queramos con weigth como dice la prácitca,
+el uso de ip_has para el balanceo por ip y el de keepalive. Dejamos el reparto por pesos 1 y 2.
 
-**captura de pantalla de la configuracion con keepalive**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/keepalive.png)
+**captura de pantalla de la configuracion con reparto12**
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/default21.png)
+
+
+**captura de pantalla del reparto del trabajo con esta cofiguración**
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/reparto2.png)
