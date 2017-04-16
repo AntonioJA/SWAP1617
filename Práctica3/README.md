@@ -17,7 +17,7 @@ Para evitar problemas a la hora de mostrar las páginas correspondientes realiza
 Ye hemos tenido en cuenta que podemos indicar nosotros el peso que queramos con weigth como dice la prácitca,
 el uso de ip_has para el balanceo por ip y el de keepalive. Dejamos el reparto por pesos 1 y 2.
 
-**captura de pantalla de la configuracion con reparto12**
+**captura de pantalla de la configuración con reparto12**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/default21.png)
 
 
