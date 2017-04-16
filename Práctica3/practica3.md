@@ -2,7 +2,7 @@
 
 Práctica realizada en la sesión 3
 
-## Capturas de pantalla
+## Parte de Nginx
 
 **captura de pantalla de la configuración del archivo default.conf de nginx**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/configuracionNginx.png)
@@ -23,3 +23,14 @@ el uso de ip_has para el balanceo por ip y el de keepalive. Dejamos el reparto p
 
 **captura de pantalla del reparto del trabajo con esta cofiguración**
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/reparto2.png)
+
+## Parte de Haproxy
+
+**captura de pantalla de la configuración del archivo haproxy.cfg**
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/haproxyconf.png)
+
+Para que funcione correctamente paramos el servicio nginx y activamos el de haproxy.
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/haproxystart.png)
+
+**captura de pantalla en el que se muestra este reparto de trabajo por defecto**
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartohaproxy.png)
