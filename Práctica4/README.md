@@ -15,7 +15,7 @@ Creamos un directorio para albergar el certificado con:
 
 mkdir /etc/apache2/ssl
 
-![Practica4](/Practica4/Captura1.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/Captura1.png)
 
 Y ahora generaremos el certificado con:
 
@@ -25,7 +25,7 @@ Que nos pedirá cierta información para la configuración del dominio
 
 Todo esto por supuesto hay que realizarlo como root:
 
-![Practica4](/Practica4/Captura2.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/Captura2.png)
 
 Una vez añadido la información y haber terminado el proceso de configuración deberemos de editar el archivo de configuracíon del sitio default-ssl que se encuentra en la siguiente ruta:
 
@@ -33,26 +33,26 @@ Una vez añadido la información y haber terminado el proceso de configuración 
 
 Y agregar las siguientes lineas debajo de SSLEngine on:
 
-![Practica4](/Practica4/Captura3.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/Captura3.png)
 
 Ahora activaremos el sitio default-ssl y reiniciaremos apache con:
 
 a2ensite default-ssl
 service apache2 reload
 
-![Practica4](/Practica4/Captura4.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/Captura4.png)
 
 ## Configuracíon del cortafuegos
 
 Para configurar las reglas del cortafuegos con Iptables permitiendo el acceso por el puerto de HTTP y HTTPS vamos a proceder a crear un script en el cual mediante los siguientes comandos los habilitaremos:
 
-![Practica4](/Practica4/ScriptIPTables.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/ScriptIPTables.png)
 
 Una vez creado el script procederemos a añadirlo al archivo rc.local que se encuentra en la siguiente dirección:
 
 /etc/rc.local
 
-![Practica4](/Practica4/ArchivoRcLocal.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/ArchivoRcLocal.png)
 
 Como vemos primero accedemos al directorio donde se encuentra el script, le damos permisos de ejecución y seguidamente lo ejecutamos.
 
@@ -62,4 +62,4 @@ iptables -L -n -v
 
 Que nos mostrara el estado del cortafuegos:
 
-![Practica4](/Practica4/IptablesFuncionando.png)
+![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica4/IptablesFuncionando.png)
