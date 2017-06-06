@@ -17,6 +17,7 @@ Ya con el RAID creado primero le damos formato y pasamos a crear el directorio e
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica6/ConfiguracionRaid.png)
 
 Pasamos a comprobar el estado del RAID.
+
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica6/DetallesRaid.png)
 
 Una vez hecho esto obtenemos los UUID de todos los dispositivos de almacenamiento.
@@ -35,5 +36,6 @@ Primero simulamos un fallo en uno de los discos, lo retiramos en caliente y comp
 Una vez realizado esto procedemos a añadirlo y realizar una comprobación.
 
 **Añadir disco**
+
 ![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica6/AñadidoYComprobado.png)
 
