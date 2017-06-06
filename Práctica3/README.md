@@ -1,44 +1,60 @@
-# Práctica 3
+# Documentacion Práctica 3 #
 
-Práctica realizada en la sesión 3
+## Servidor Web Nginx
+Una vex instalado nginx en la máquina balanceadora con los comandos:
 
-## Parte de Nginx
+sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get
+autoremove
 
-**captura de pantalla de la configuración del archivo default.conf de nginx**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/configuracionNginx.png)
+sudo apt-get install nginx
 
-Con esta configuración tenemos un reparto de trabajo de peso 1 para ambas máquinas.
-Para evitar problemas a la hora de mostrar las páginas correspondientes realizamos un rm al directorio 
-/etc/nginx/sites-enabled/default
+sudo systemctl start nginx
 
-**captura de pantalla en el que se muestra este reparto de trabajo por defecto**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartoTrabajo.png)
+Ahora procedemos a configurar el archivo /etc/nginx/conf.d/default.conf de la siguiente forma:
+![Practica3](/Practica3/ConfiguracionNginx.png)
 
-Ye hemos tenido en cuenta que podemos indicar nosotros el peso que queramos con weigth como dice la prácitca,
-el uso de ip_has para el balanceo por ip y el de keepalive. Dejamos el reparto por pesos 1 y 2.
+Una vez configurado el archivo default.conf hemos borrado el archivo /etc/nginx/sites-enabled/default para que nos salga la página de inicio de cada una de las máquinas
+![Practica3](/Practica3/RmDefault.png)
 
-**captura de pantalla de la configuración con reparto12**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/default21.png)
+Y una vez hecho esto, ya podemos comprobar que el balanceo de carga entre las dos máquinas que en nuestro caso hemos modificado el archivo default.conf para que la máquina 1 tenga el doble de capacidad que la máquina 2:
+
+![Practica3](/Practica3/ConfiguracionDefaultFinal.png)
+
+Finalmente podemos comprobar el reparto de carga final:
+
+![Practica3](/Practica3/FuncionaminetoFinal.png)
+
+## Balanceo de carga con haproxy
+
+Primero instalamos haproxy con:
+
+sudo apt-get install haproxy
+
+Ahora procedemos a configurar el archivo /etc/haproxy/haproxy.cfg que lo dejamos de la siguiente manera:
+
+![Practica3](/Practica3/ConfiguracionHaproxy.png)
 
 
-**captura de pantalla del reparto del trabajo con esta cofiguración**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/reparto2.png)
+Lanzamos el servicio con el comando:
 
-## Parte de Haproxy
+sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 
-**captura de pantalla de la configuración del archivo haproxy.cfg**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/haproxyconf.png)
+Y comprobamos el balanceo de carga:
 
-Para que funcione correctamente paramos el servicio nginx y activamos el de haproxy.
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/haproxystart.png)
+![Practica3](/Practica3/RepartoHaproxy.png)
 
-**captura de pantalla en el que se muestra este reparto de trabajo por defecto**
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/repartohaproxy.png)
+## Someter a una alta carga el servidor balanceador
 
-## Parte de alta carga
+Con el comando:
 
-Utilizamos primero con la configuración mediante nginx con 10000 peticiones haciendo 100 cada vez.
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/cargarnginx.png)
+ab -n 10000 -c 100 10.0.2.14/index.html
 
-Hacemos lo mismo pero con la configuración de haproxy
-![imagen](https://github.com/AntonioJA/SWAP1617/blob/master/Pr%C3%A1ctica3/cargarhaproxy.png)
+Hacemos un Benchmark a la máquina balanceadora.
+
+Primeramente le realizamos el Benchmark con el servicio Nginx funcionando:
+
+![Practica3](/Practica3/ApacheBenchmarktNginx.png)
+
+Y ahora realizamos el mismo Benchmark con el servicio Haproxy funcionando:
+
+![Practica3](/Practica3/ApacheBenchmarkHaproxy.png)
